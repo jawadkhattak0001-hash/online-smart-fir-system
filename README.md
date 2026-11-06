@@ -1,105 +1,242 @@
-🚨 Online Smart FIR System (Fironix)
+# 🚔 Online Smart FIR System
+### A Digital Platform for Transparent, Efficient & Accessible First Information Report Management
+
 <p align="center">
-  <b>A Digital Platform for Transparent, Efficient, and Accessible First Information Report Management</b>
+  <img src="https://img.shields.io/badge/Project-Final%20Year%20Project-0078D7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Developed-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Platform-Mobile%20%26%20Web-blueviolet?style=for-the-badge" />
 </p>
 
+<p align="center">
+  <b>Empowering Citizens | Strengthening Law Enforcement | Building Digital Trust</b>
+</p>
 
-📌 Project Overview & Motivation
-The Online Smart FIR System digitizes the traditional First Information Report (FIR) process through modern mobile and web technology. Traditional police complaint filing often involves long queues, manual paper-based forms prone to errors or loss, lack of transparency, and delayed investigations.
-This system addresses these gaps by offering:
-24/7 Mobile Filing: Complainants can file an FIR anytime, anywhere via the mobile app using Expo Go.
-Real-Time Tracking: Citizens can monitor their complaint status (Pending Review ➔ Under Investigation ➔ Resolved).
-Automated Officer Assignment: Police admins can seamlessly review cases and assign Sub-Inspectors (SIs) directly from the Web Dashboard.
-Paperless & Secure: All records are authenticated and securely stored in MongoDB.
+---
 
-👥 Project Team & Supervision
-Team Members:
-Muhammad Jawad
-Rohail Ahmad
-Ali Rehman
-Supervisor: Dr. Ghani Ur Rehman
-Department: Department of Computer Science
-Academic Year: 2026
+## 📌 About The Project
 
-🏗️ Architecture & Workflow
-[ Citizen Mobile App (React Native / Expo Go) ]
-                       │
-                       │ (REST API / JWT Auth / CNIC Verification)
-                       ▼
-         [ Node.js + Express Backend ]
-                       │
-                       ▼
-             [ MongoDB Database ]
-                       │
-                       │ (Real-Time Status Sync)
-                       ▼
-     [ Police Web Dashboard (React.js) ]
-End-to-End User Journey:
-User Sign Up & Login: Citizens create an account on the mobile application (verified with CNIC/JWT authentication).
-File New FIR: Citizens submit incident details (Category, Location, Date & Time, Description).
-Real-time Web Dashboard Notification: Incoming complaints instantly appear on the Centralized Station Dashboard.
-Case Review & Officer Assignment: Admin opens the Case Review Portal and assigns an Investigating Officer (e.g., SI Ali Raza, SI Hamza Ahmed, SI Usman Khan).
-Investigation & Tracking: Status changes to Under Investigation, allowing citizens to track progress directly on their mobile app screen.
+**Online Smart FIR System (SmartFIR)** is a digital platform developed to modernize and simplify the traditional First Information Report (FIR) registration and management process.
 
-🛠️ Tech Stack & Dependencies
-Mobile App (Frontend)
-Framework: React Native with Expo Go
-Navigation: React Navigation
-HTTP Client: Axios / Fetch API
-Police Web Dashboard (Frontend)
-Framework: React.js (Vite / Tailwind CSS)
-Icons & UI: Lucide React / UI Components
-Backend & Database
-Runtime: Node.js
-Framework: Express.js
-Database: MongoDB & Mongoose ODM
-Security: JSON Web Tokens (JWT), Password Hashing (Bcrypt)
+The system provides a mobile application for citizens to submit FIR reports online and a web-based dashboard for police officers to manage, review, assign, and track complaints.
 
-💻 Installation & Setup Guide
-1. Prerequisites
-Node.js (v18 or higher)
-Git
-Expo Go app installed on your physical mobile device (Android/iOS)
-2. Backend Setup
-cd backend
+The main objective is to improve transparency, accessibility, efficiency, and communication between citizens and law enforcement agencies.
+
+## 🎯 Problem Statement
+
+Traditional FIR registration systems often face several challenges:
+
+- ❌ Long queues and delays at police stations.
+- ❌ Manual paperwork and documentation.
+- ❌ Limited transparency in FIR status tracking.
+- ❌ Delays in assigning investigating officers.
+- ❌ Difficulty accessing complaint updates.
+
+### 💡 Our Digital Solution
+
+SmartFIR addresses these challenges through:
+
+- ✅ Quick online FIR submission.
+- ✅ Digital and centralized record management.
+- ✅ Real-time FIR status tracking.
+- ✅ Officer assignment and investigation workflow.
+- ✅ Improved transparency and accessibility.
+
+---
+
+## ✨ Key Features
+
+### 👤 1. Citizen Mobile Application
+
+- User registration and login.
+- Online FIR submission.
+- Complaint and incident details.
+- Location and multimedia evidence support.
+- View submitted FIRs.
+- Track FIR status and updates.
+
+### 👮 2. Police Web Dashboard
+
+- Secure police officer login.
+- View and manage incoming FIR reports.
+- Review complaint details.
+- Assign investigating officers.
+- Update investigation status.
+- Monitor FIR progress.
+
+### 🔐 3. Security & Authentication
+
+- JWT-based authentication.
+- Secure token-based authorization.
+- CNIC verification/validation.
+- Protected API endpoints.
+- Role-based access management.
+
+### 📊 4. FIR Management
+
+- Digital FIR records.
+- Centralized database management.
+- Officer assignment workflow.
+- Investigation notes and status updates.
+- Improved accountability and transparency.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Technologies |
+|---|---|
+| 📱 Mobile Application | React Native, Expo Go |
+| 🌐 Web Dashboard | React.js |
+| ⚙️ Backend | Node.js, Express.js |
+| 🗄️ Database | MongoDB |
+| 🔗 ODM | Mongoose |
+| 🔐 Authentication | JWT |
+| 🔑 Verification | CNIC Verification |
+| 🔌 API | RESTful API |
+| 💻 Development Tools | VS Code, Postman, MongoDB |
+
+---
+
+## 🏗️ System Architecture
+
+SmartFIR follows a client-server architecture.
+
+```text
+       👤 CITIZEN
+            |
+            ▼
+   React Native Mobile App
+            |
+            ▼
+       RESTful API
+            |
+            ▼
+     Node.js + Express
+            |
+            ▼
+         MongoDB
+            |
+            ▼
+      FIR Management
+            |
+            ▼
+    Police Web Dashboard
+            |
+            ▼
+      👮 POLICE OFFICERS
+```
+
+### 🔄 How It Works
+
+1. Citizens submit FIR reports through the mobile application.
+2. The backend processes requests through REST APIs.
+3. FIR information is stored in MongoDB.
+4. Police officers access submitted reports through the web dashboard.
+5. Officers review complaints and assign investigating officers.
+6. FIR status and investigation progress are updated through the system.
+
+---
+
+## 📸 Project Screenshots & Demo
+
+The project includes the following main interfaces:
+
+- Citizen Mobile Application
+- New FIR Registration Screen
+- Police Officer Dashboard
+- FIR Management Interface
+- Officer Assignment Workflow
+
+<!-- Add your actual screenshots here after uploading them to your GitHub repository. -->
+
+<!--
+Example:
+
+![Citizen App](screenshots/citizen-app.png)
+![FIR Registration](screenshots/fir-registration.png)
+![Police Dashboard](screenshots/police-dashboard.png)
+![Officer Assignment](screenshots/officer-assignment.png)
+-->
+
+---
+
+## 📂 Project Structure
+
+The project repository is organized into the following main directories:
+
+```text
+Online-Smart-FIR-System/
+│
+├── backend/
+│
+├── face-detection-service/
+│
+├── mobileApp/
+│
+├── smartfir/
+│
+├── scripts/
+│
+├── .vscode/
+│
+├── package.json
+│
+├── package-lock.json
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to set up the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to Project Directory
+
+```bash
+cd YOUR_PROJECT_FOLDER
+```
+
+### 3. Install Dependencies
+
+```bash
 npm install
-# Create a .env file with PORT, MONGO_URI, and JWT_SECRET
+```
+
+### 4. Configure Environment Variables
+
+Configure the required environment variables for the backend, database connection, and authentication.
+
+Keep your credentials and secret keys private. Do not upload your `.env` file to GitHub.
+
+### 5. Start the Mobile Application
+
+```bash
 npm start
-3. Police Web Dashboard Setup
-cd smartfir
-npm install
-npm run dev
-4. Mobile App Setup (Expo Go)
-cd mobileApp
-npm install
-npx expo start
-Scan the QR code printed in the terminal using the Expo Go application on your mobile device.
+```
 
-📊 Features Matrix: Traditional vs Smart FIR
-Feature
-Traditional FIR System
-Our Online Smart FIR System
-Filing Access
-Physical visit to Police Station required
-24/7 Mobile App Filing
-Status Tracking
-None / Manual follow-ups
-Real-Time Dashboard & Mobile Updates
-Officer Assignment
-Manual paper routing
-One-click Automated Officer Selection
-Data Integrity
-Paper records (risk of damage/loss)
-Secure Cloud Storage (MongoDB)
+This starts the Expo development server using the root project script.
 
+**Note:** Backend and web dashboard services may require their own dependency installation and startup commands, depending on their respective package configurations.
 
-🔮 Future Roadmap
-GPS Auto Location: Automatic incident location mapping via device GPS.
-Multimedia Evidence Upload: Support for uploading incident photos and video proof.
-Nearest Police Station Integration: Interactive map routing to the closest station.
-In-App Direct Chat: Real-time messaging between citizen and assigned Investigating Officer.
-AI Classification: Automated categorization and urgency prioritization using AI/ML.
+---
 
-<p align="center">
-  <i>Developed for Final Year Project 2026 — Department of Computer Science</i>
-</p>
+## 🔮 Future Enhancements
+
+The following improvements are planned for future development:
+
+- 📍 GPS-based automatic location detection.
+- 📷 Improved photo and video evidence management.
+- 🗺️ Interactive reporting and location maps.
+- 💬 Real-time communication with police officers.
+- 🤖 AI-assisted incident categorization.
+- 🔗 Blockchain-based security for tamper-proof FIR records.
+
+*These are proposed future enhancements, not claims of
