@@ -1,15 +1,22 @@
-This repository contains two apps:
-
-- `mobileApp` — the Expo React Native mobile application. Start it with:
-
-  npm run start --prefix mobileApp
-
-  or from the repo root:
-
-  npm start
-
-- `smartfir` — a web app (Vite + Tailwind) in the `smartfir` folder.
-
-Notes:
-- Do not run `npx expo start` from the repository root; use the `mobileApp` folder instead. The root `start` script now forwards to the mobile app.
-- The root `postcss.config.js` is intentionally empty to avoid PostCSS async plugin issues if tooling is run from the repo root.
+🚨 Online Smart FIR System (Fironix)A modern, transparent, and efficient digital platform designed to digitize the traditional First Information Report (FIR) filing and tracking process using mobile and web technologies.👥 Project Team & SupervisionTeam Members:Muhammad JawadRohail AhmadAli RehmanSupervisor: Dr. Ghani Ur RehmanDepartment: Department of Computer ScienceInstitution: Khushal Khan Khattak University KarakOnline Smart FIR System (Fironix)A modern, transparent, and efficient digital platform designed to digitize the traditional First Information Report (FIR) filing and tracking process using mobile and web technologies.👥 Project Team & SupervisionTeam Members:Muhammad JawadRohail AhmadAli RehmanSupervisor: Dr. Ghani Ur RehmanAcademic Year: 2026📌 Problem Statement & Motivation🛑 Challenges in Traditional FIR FilingLong Waiting Queues: Citizens wait for hours at police stations to log a complaint.Manual Paperwork: Paper forms are prone to errors, damage, or record loss.Lack of Transparency: Citizens receive no real-time status updates after submitting an FIR.Delayed Investigation: Manual routing slows down investigating officers and delays justice.✨ The Smart FIR Digital Solution24/7 Mobile Filing: Submit FIRs digitally from anywhere using a smartphone.Paperless & Automated: Digital records with secure database storage.Real-Time Transparency: Live case tracking via interactive user and police dashboards.Faster Investigation: Automated case routing and swift officer assignment.🏗️ System Architecture & Workflow[ Citizen Mobile App (React Native / Expo Go) ]
+                       │
+                       │ (REST API / JWT Authentication / CNIC Verification)
+                       ▼
+         [ Node.js + Express.js Backend Server ]
+                       │
+                       ▼
+             [ MongoDB Database Storage ]
+                       │
+                       │ (Real-Time Data Synchronization)
+                       ▼
+     [ Police Station Web Dashboard (React.js) ]
+🔄 End-to-End User JourneyUser Authentication & Login:Citizens register and log into the mobile application (verified via CNIC and JWT authentication).Instant FIR Filing:Citizen selects incident category (Theft, Robbery, Cyber Crime, etc.), location, date, time, and detailed description.Form submits in less than 60 seconds via secure REST APIs.Real-time Web Dashboard Alert:Police admins view incoming FIR complaints live on the Centralized Station Dashboard under Pending Review.Officer Assignment & Investigation Initiation:Admin selects an available Sub-Inspector (e.g., SI Ali Raza, SI Hamza Ahmed, SI Usman Khan) from the Case Review Portal.System confirms assignment, and case status changes to Under Investigation.Live Status Synchronization:Status changes are immediately visible to both the citizen in their mobile app and the police officer on their web dashboard.🛠️ Tech Stack & Development ToolsFrontend (Mobile App)React Native + Expo Go: Cross-platform mobile development for instant mobile deployment.Frontend (Web Dashboard)React.js + Tailwind CSS: Centralized management system for police officers and admins.Backend & DatabaseNode.js & Express.js: RESTful API architecture.MongoDB & Mongoose ODM: Document store schema design.JWT (JSON Web Token): Secure token-based session management.💻 Local Setup & Execution Guide1. Backend Server (backend)cd backend
+npm install
+npm start
+2. Police Web Dashboard (smartfir)cd smartfir
+npm install
+npm run dev
+3. Mobile Application (mobileApp)cd mobileApp
+npm install
+npx expo start
+Scan the generated QR code using the Expo Go app on your physical mobile device.📊 Features Comparison: Traditional vs Smart FIRFeatureTraditional FIR SystemOur Online Smart FIR SystemFiling AccessPhysical visit to police station required24/7 Mobile App Filing from anywhereStatus TrackingNot available / Physical follow-upsReal-time live status trackingOfficer AssignmentManual paper-based routingOne-click automated officer assignmentData SecurityPaper forms (high risk of loss)Secure database cloud storage🔮 Future Roadmap & EnhancementsGPS Auto Location: Automatically capture precise incident coordinates.Multimedia Evidence: Direct photo and video upload support.Nearest Police Station Integration: Map integration showing routes to the nearest station.In-App Live Chat: Direct real-time chat channel between citizen and assigned SI.AI Incident Classification: Automated categorization and priority rating using AI/ML algorithms.© 2026 Online Smart FIR System — Department of Computer Science, Khushal Khan Khattak University Karak
