@@ -1,0 +1,13 @@
+{
+  "name": "fir-workspace",
+  "private": true,
+  "scripts": {
+    "start": "cd mobileApp && npx expo start",
+    "start:mobile": "cd mobileApp && npx expo start -c"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "expo": "^57.0.17",
+    "expo-av": "^16.0.8"
+  }
+}
