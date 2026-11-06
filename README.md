@@ -194,9 +194,7 @@ Follow these steps to set up the project locally.
 
 ### 1. Clone the Repository
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
+git clone https://github.com/jawadkhattak0001-hash/online-smart-fir-system.git
 
 ### 2. Navigate to Project Directory
 
